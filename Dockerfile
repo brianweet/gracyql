@@ -59,6 +59,6 @@ COPY . /app/kairntech/gracyql/
 RUN chmod +x /app/kairntech/gracyql/scripts/install && \
     bash scripts/install && \
     . venv/bin/activate && \
-    python3 -m spacy download de && \
-    python3 -m spacy download en && \
-    python3 -m spacy download fr
+    python3 -m spacy download en_core_web_sm && \
+    python3 -m spacy download nl_core_news_sm && \
+    python3 -m spacy download nb_core_news_sm
