@@ -56,8 +56,8 @@ COPY . /app/kairntech/gracyql/
 
 # Download spacy models (de, en, fr) +
 # Install prereq asked by requirements.txt
-RUN chmod +x /app/kairntech/gracyql/scripts/install && \
-    bash scripts/install && \
+RUN chmod +x /app/kairntech/gracyql/scripts/install.sh && \
+    bash scripts/install.sh && \
     . venv/bin/activate && \
     python3 -m spacy download en_core_web_sm && \
     python3 -m spacy download nl_core_news_sm && \
